@@ -1,0 +1,49 @@
+name: Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  docker-build-push:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        versions:
+          - CONTEXT: .
+            IMAGES:
+              - wiremock/auth-mocks:latest
+            PLATFORMS:
+              - linux/amd64
+              - linux/arm64
+              - linux/arm/v7
+    
+    steps:
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+        with:
+          image: tonistiigi/binfmt:latest
+          platforms: all
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Checkout sources
+        uses: actions/checkout@main
+        with:
+          fetch-depth: 0
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: wiremockbot
+          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+
+      - name: Push WireMock Docker image
+        uses: docker/build-push-action@v4
+        with:
+          context: ${{ matrix.versions.CONTEXT }}
+          platforms: ${{ join(matrix.versions.PLATFORMS, ',') }}
+          push: true
+          tags: ${{ join(matrix.versions.IMAGES, ',') }}
+
