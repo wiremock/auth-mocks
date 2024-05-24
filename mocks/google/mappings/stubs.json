@@ -1,0 +1,272 @@
+{
+  "mappings" : [ {
+    "id" : "c0e1bb26-8273-4dfe-9540-ff4164f0b741",
+    "name" : "Test login page code and state",
+    "request" : {
+      "urlPath" : "/test",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000000\" />\n    <link\n      rel=\"shortcut icon\"\n      type=\"image/svg\"\n      href=\"https://app.wiremock.cloud/favicon_wiremock.svg\"\n    />\n    <title>WireMock Google authentication mock</title>\n    <script type=\"module\" crossorigin src=\"/assets/index.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index.css\">\n  </head>\n  <body class=\"antialiased text-slate-500 dark:text-slate-400 bg-slate-50\">\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n\n  </body>\n</html>\n",
+      "headers" : {
+        "Content-Type" : "text/html"
+      }
+    },
+    "uuid" : "c0e1bb26-8273-4dfe-9540-ff4164f0b741",
+    "persistent" : true,
+    "priority" : 5
+  }, {
+    "id" : "3b81cfe7-0103-46b8-85d0-327d7b559692",
+    "name" : "Test page Javascript",
+    "request" : {
+      "url" : "/assets/index.js",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "bodyFileName" : "index.js",
+      "headers" : {
+        "Content-Type" : "text/javascript"
+      },
+      "transformers" : [ "response-template" ]
+    },
+    "uuid" : "3b81cfe7-0103-46b8-85d0-327d7b559692",
+    "persistent" : true,
+    "priority" : 5
+  }, {
+    "id" : "96b2e0e4-233f-4bb7-83af-eaa491af7759",
+    "name" : "Test page CSS",
+    "request" : {
+      "url" : "/assets/index.css",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "*,:before,:after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}:before,:after{--tw-content: \"\"}html,:host{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",Segoe UI Symbol,\"Noto Color Emoji\";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dl,dd,h1,h2,h3,h4,h5,h6,hr,figure,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}ol,ul,menu{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}button,[role=button]{cursor:pointer}:disabled{cursor:default}img,svg,video,canvas,audio,iframe,embed,object{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*,:before,:after{--tw-border-spacing-x: 0;--tw-border-spacing-y: 0;--tw-translate-x: 0;--tw-translate-y: 0;--tw-rotate: 0;--tw-skew-x: 0;--tw-skew-y: 0;--tw-scale-x: 1;--tw-scale-y: 1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness: proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width: 0px;--tw-ring-offset-color: #fff;--tw-ring-color: rgb(59 130 246 / .5);--tw-ring-offset-shadow: 0 0 #0000;--tw-ring-shadow: 0 0 #0000;--tw-shadow: 0 0 #0000;--tw-shadow-colored: 0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x: 0;--tw-border-spacing-y: 0;--tw-translate-x: 0;--tw-translate-y: 0;--tw-rotate: 0;--tw-skew-x: 0;--tw-skew-y: 0;--tw-scale-x: 1;--tw-scale-y: 1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness: proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width: 0px;--tw-ring-offset-color: #fff;--tw-ring-color: rgb(59 130 246 / .5);--tw-ring-offset-shadow: 0 0 #0000;--tw-ring-shadow: 0 0 #0000;--tw-shadow: 0 0 #0000;--tw-shadow-colored: 0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }.container{width:100%}@media (min-width: 640px){.container{max-width:640px}}@media (min-width: 768px){.container{max-width:768px}}@media (min-width: 1024px){.container{max-width:1024px}}@media (min-width: 1280px){.container{max-width:1280px}}@media (min-width: 1536px){.container{max-width:1536px}}.mx-auto{margin-left:auto;margin-right:auto}.my-4{margin-top:1rem;margin-bottom:1rem}.mb-4{margin-bottom:1rem}.ml-5{margin-left:1.25rem}.mr-2{margin-right:.5rem}.mr-auto{margin-right:auto}.mt-10{margin-top:2.5rem}.flex{display:flex}.table{display:table}.w-1\\/12{width:8.333333%}.w-1\\/6{width:16.666667%}.w-40{width:10rem}.w-9\\/12{width:75%}.w-full{width:100%}.table-auto{table-layout:auto}.items-center{align-items:center}.whitespace-pre-wrap{white-space:pre-wrap}.text-wrap{text-wrap:wrap}.break-words{overflow-wrap:break-word}.rounded-md{border-radius:.375rem}.border-b-2{border-bottom-width:2px}.border-t-2{border-top-width:2px}.border-blue-600{--tw-border-opacity: 1;border-color:rgb(37 99 235 / var(--tw-border-opacity))}.border-slate-400{--tw-border-opacity: 1;border-color:rgb(148 163 184 / var(--tw-border-opacity))}.border-b-gray-200{--tw-border-opacity: 1;border-bottom-color:rgb(229 231 235 / var(--tw-border-opacity))}.bg-blue-900{--tw-bg-opacity: 1;background-color:rgb(30 58 138 / var(--tw-bg-opacity))}.bg-sky-500{--tw-bg-opacity: 1;background-color:rgb(14 165 233 / var(--tw-bg-opacity))}.bg-slate-50{--tw-bg-opacity: 1;background-color:rgb(248 250 252 / var(--tw-bg-opacity))}.p-4{padding:1rem}.px-4{padding-left:1rem;padding-right:1rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.pb-2{padding-bottom:.5rem}.text-left{text-align:left}.text-2xl{font-size:1.5rem;line-height:2rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-bold{font-weight:700}.font-semibold{font-weight:600}.text-gray-600{--tw-text-opacity: 1;color:rgb(75 85 99 / var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity: 1;color:rgb(17 24 39 / var(--tw-text-opacity))}.text-sky-400{--tw-text-opacity: 1;color:rgb(56 189 248 / var(--tw-text-opacity))}.text-slate-100{--tw-text-opacity: 1;color:rgb(241 245 249 / var(--tw-text-opacity))}.text-slate-200{--tw-text-opacity: 1;color:rgb(226 232 240 / var(--tw-text-opacity))}.text-slate-500{--tw-text-opacity: 1;color:rgb(100 116 139 / var(--tw-text-opacity))}.text-white{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-sm{--tw-shadow: 0 1px 2px 0 rgb(0 0 0 / .05);--tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)}.hover\\:border-blue-400:hover{--tw-border-opacity: 1;border-color:rgb(96 165 250 / var(--tw-border-opacity))}.hover\\:bg-blue-600:hover{--tw-bg-opacity: 1;background-color:rgb(37 99 235 / var(--tw-bg-opacity))}@media (prefers-color-scheme: dark){.dark\\:text-slate-400{--tw-text-opacity: 1;color:rgb(148 163 184 / var(--tw-text-opacity))}}\n",
+      "headers" : {
+        "Content-Type" : "text/css; charset=utf-8"
+      }
+    },
+    "uuid" : "96b2e0e4-233f-4bb7-83af-eaa491af7759",
+    "persistent" : true,
+    "priority" : 5
+  }, {
+    "id" : "ed383fa8-3e1b-45c0-9099-895d8aa24b8e",
+    "name" : "OpenID configuration",
+    "request" : {
+      "url" : "/.well-known/openid-configuration",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n \"issuer\": \"{{request.baseUrl}}\",\n \"authorization_endpoint\": \"{{request.baseUrl}}/o/oauth2/v2/auth\",\n \"device_authorization_endpoint\": \"{{request.baseUrl}}/device/code\",\n \"token_endpoint\": \"{{request.baseUrl}}/token\",\n \"userinfo_endpoint\": \"{{request.baseUrl}}/v1/userinfo\",\n \"revocation_endpoint\": \"{{request.baseUrl}}/revoke\",\n \"jwks_uri\": \"{{request.baseUrl}}/oauth2/v3/certs\",\n \"response_types_supported\": [\n  \"code\",\n  \"token\",\n  \"id_token\",\n  \"code token\",\n  \"code id_token\",\n  \"token id_token\",\n  \"code token id_token\",\n  \"none\"\n ],\n \"subject_types_supported\": [\n  \"public\"\n ],\n \"id_token_signing_alg_values_supported\": [\n  \"RS256\"\n ],\n \"scopes_supported\": [\n  \"openid\",\n  \"email\",\n  \"profile\"\n ],\n \"token_endpoint_auth_methods_supported\": [\n  \"client_secret_post\",\n  \"client_secret_basic\"\n ],\n \"claims_supported\": [\n  \"aud\",\n  \"email\",\n  \"email_verified\",\n  \"exp\",\n  \"family_name\",\n  \"given_name\",\n  \"iat\",\n  \"iss\",\n  \"name\",\n  \"picture\",\n  \"sub\"\n ],\n \"code_challenge_methods_supported\": [\n  \"plain\",\n  \"S256\"\n ],\n \"grant_types_supported\": [\n  \"authorization_code\",\n  \"refresh_token\",\n  \"urn:ietf:params:oauth:grant-type:device_code\",\n  \"urn:ietf:params:oauth:grant-type:jwt-bearer\"\n ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      },
+      "transformers" : [ "response-template" ]
+    },
+    "uuid" : "ed383fa8-3e1b-45c0-9099-895d8aa24b8e",
+    "persistent" : true,
+    "priority" : 5
+  }, {
+    "id" : "df0736fc-d643-4724-b7e1-bb223504adaf",
+    "name" : "Test login page",
+    "request" : {
+      "url" : "/test",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000000\" />\n    <link\n      rel=\"shortcut icon\"\n      type=\"image/svg\"\n      href=\"https://app.wiremock.cloud/favicon_wiremock.svg\"\n    />\n    <title>WireMock Google authentication mock</title>\n    <script type=\"module\" crossorigin src=\"/assets/index.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index.css\">\n  </head>\n  <body class=\"antialiased text-slate-500 dark:text-slate-400 bg-slate-50\">\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n\n  </body>\n</html>\n",
+      "headers" : {
+        "Content-Type" : "text/html"
+      }
+    },
+    "uuid" : "df0736fc-d643-4724-b7e1-bb223504adaf",
+    "persistent" : true,
+    "priority" : 5
+  }, {
+    "id" : "ffe52af6-57c6-4412-9d2c-6e839bc8158f",
+    "name" : "Login page",
+    "request" : {
+      "urlPath" : "/o/oauth2/v2/auth",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+     "bodyFileName": "login.html",
+      "headers" : { },
+      "transformers" : [ "response-template" ]
+    },
+    "uuid" : "ffe52af6-57c6-4412-9d2c-6e839bc8158f",
+    "persistent" : true,
+    "priority" : 5
+  }, {
+    "id" : "e4b4828e-bfb5-4bd3-ae41-9bb169c77fc7",
+    "name" : "Google logo",
+    "request" : {
+      "url" : "/images/google-logo.svg",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "\n<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" viewBox=\"0 0 24 24\" width=\"24\"><path d=\"M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z\" fill=\"#4285F4\"/><path d=\"M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z\" fill=\"#34A853\"/><path d=\"M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z\" fill=\"#FBBC05\"/><path d=\"M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z\" fill=\"#EA4335\"/><path d=\"M1 1h22v22H1z\" fill=\"none\"/></svg>",
+      "headers" : {
+        "Content-Type" : "image/svg+xml"
+      }
+    },
+    "uuid" : "e4b4828e-bfb5-4bd3-ae41-9bb169c77fc7",
+    "persistent" : true,
+    "priority" : 5
+  }, {
+    "id" : "8d9b466f-5743-4a69-ad10-64db5ab86e79",
+    "name" : "WireMock logo wide",
+    "request" : {
+      "url" : "/images/wiremock-logo-wide.svg",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "<svg width=\"83\" height=\"10\" viewBox=\"0 0 83 10\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M3.14485 9.78724L0 0.212776H3.24968L4.71728 4.78724L6.18488 0.212776H8.91042L10.4828 4.78724L11.8456 0.212776H14.9905L11.9504 9.78724H9.22491L7.54765 5.10639L5.87039 9.78724H3.14485Z\" fill=\"#0FB2EF\"/>\n<path d=\"M41.4073 0.212763L38.2625 9.78723H41.5121L42.9797 5.21276L44.4473 9.78723H47.1729L48.7453 5.21276L50.1081 9.78723H53.2529L50.2129 0.212763H47.4874L45.8101 4.89361L44.1328 0.212763H41.4073Z\" fill=\"#F59121\"/>\n<path d=\"M15.6194 0.212776H18.7642V9.78724H15.6194L15.6194 0.212776Z\" fill=\"#0FB2EF\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M37.6334 2.87235V0.212777L29.4568 0.212776V0.21278L29.4568 2.87235L29.4568 3.72341L29.4568 6.06384L29.4568 7.12767V9.78725H32.6016L37.6334 9.78725V7.12767L32.6016 7.12767V6.06384L37.2141 6.06384V3.72341L32.6016 3.72341V2.87235L37.6334 2.87235Z\" fill=\"#0FB2EF\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M21.9091 0.212776H25.4235C27.3036 0.212776 28.8277 1.73691 28.8277 3.61703C28.8277 4.92941 28.0851 6.06833 26.9972 6.63651L29.0374 9.78725H25.4732L23.6912 7.02129L23.6912 7.02129H22.9574V9.78725H19.8125V0.21278H21.9091V0.212776ZM22.9574 2.87234V4.78723H24.7254C25.2542 4.78723 25.6829 4.35857 25.6829 3.82978C25.6829 3.301 25.2542 2.87234 24.7254 2.87234H22.9574Z\" fill=\"#0FB2EF\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M57.1316 10C60.0263 10 62.373 7.76142 62.373 5C62.373 2.23858 60.0263 0 57.1316 0C54.2368 0 51.8901 2.23858 51.8901 5C51.8901 7.76142 54.2368 10 57.1316 10ZM59.0185 5.00001C59.0185 3.82493 58.1737 2.87235 57.1316 2.87235C56.0895 2.87235 55.2447 3.82493 55.2447 5.00001C55.2447 6.17508 56.0895 7.12767 57.1316 7.12767C58.1737 7.12767 59.0185 6.17508 59.0185 5.00001Z\" fill=\"#F59121\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M72.1772 7.50924C71.3059 8.99865 69.6826 10 67.824 10C65.045 10 62.7922 7.76142 62.7922 5C62.7922 2.23858 65.045 0 67.824 0C69.6704 0 71.2844 0.988175 72.1599 2.46132L69.4616 4.08947C69.1711 3.36993 68.547 2.87235 67.824 2.87235C66.8236 2.87235 66.0126 3.82493 66.0126 5.00001C66.0126 6.17508 66.8236 7.12767 67.824 7.12767C68.59 7.12767 69.245 6.56912 69.5099 5.77984L72.1772 7.50924Z\" fill=\"#F59121\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M76.0006 3.78175V0.212789H72.8557V9.78726H76.0006V7.79295L76.8493 6.80311L78.8309 9.78724H82.3951L78.9946 4.30108L82.4999 0.212776H78.7261L76.0006 3.78175Z\" fill=\"#F59121\"/>\n</svg>\n",
+      "headers" : {
+        "Content-Type" : "image/svg+xml"
+      }
+    },
+    "uuid" : "8d9b466f-5743-4a69-ad10-64db5ab86e79",
+    "persistent" : true,
+    "priority" : 5
+  }, {
+    "id" : "408155b0-7f79-4751-9854-6fd5f82f452e",
+    "name" : "Favicon",
+    "request" : {
+      "url" : "/favicon.svg",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   width=\"32\"\n   height=\"32\"\n   viewBox=\"0 0 32 32\"\n   fill=\"none\"\n   version=\"1.1\"\n   id=\"svg10\"\n   sodipodi:docname=\"favicon.svg\"\n   inkscape:version=\"1.2.2 (732a01da63, 2022-12-09)\"\n   xmlns:inkscape=\"http://www.inkscape.org/namespaces/inkscape\"\n   xmlns:sodipodi=\"http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\">\n  <defs\n     id=\"defs14\" />\n  <sodipodi:namedview\n     id=\"namedview12\"\n     pagecolor=\"#ffffff\"\n     bordercolor=\"#000000\"\n     borderopacity=\"0.25\"\n     inkscape:showpageshadow=\"2\"\n     inkscape:pageopacity=\"0.0\"\n     inkscape:pagecheckerboard=\"0\"\n     inkscape:deskcolor=\"#d1d1d1\"\n     showgrid=\"false\"\n     inkscape:zoom=\"18.318485\"\n     inkscape:cx=\"28.277448\"\n     inkscape:cy=\"15.940183\"\n     inkscape:window-width=\"1920\"\n     inkscape:window-height=\"1009\"\n     inkscape:window-x=\"-8\"\n     inkscape:window-y=\"-8\"\n     inkscape:window-maximized=\"1\"\n     inkscape:current-layer=\"svg10\" />\n  <circle\n     cx=\"16\"\n     cy=\"16\"\n     r=\"16\"\n     fill=\"white\"\n     id=\"circle2\" />\n  <path\n     d=\"M13.4286 21L16.7429 11H17.5714L14.2572 21H13.4286Z\"\n     fill=\"white\"\n     id=\"path8\" />\n  <path\n     d=\"M 8.5475748,22.003887 H 5.1636498 L 1.7069568,11.269931 h 3.6568176 z\"\n     fill=\"#0fb2ef\"\n     id=\"path297\"\n     style=\"stroke-width:0.112854\" />\n  <path\n     d=\"M 8.5475748,22.003887 H 5.2364184 L 8.4020267,11.269931 h 3.6750213 z\"\n     fill=\"#0fb2ef\"\n     id=\"path299\"\n     style=\"stroke-width:0.112854\" />\n  <path\n     d=\"M 13.5781,22.003887 H 11.876923 L 8.4020379,11.269931 h 3.6750101 l 3.05641,10.733956 z\"\n     fill=\"#0fb2ef\"\n     id=\"path301\"\n     style=\"stroke-width:0.112854\" />\n  <path\n     d=\"m 15.133458,22.003887 h -3.238342 l 3.111043,-10.733956 h 3.656818 z\"\n     fill=\"#0fb2ef\"\n     id=\"path303\"\n     style=\"stroke-width:0.112854\" />\n  <path\n     d=\"m 18.726514,11.269931 h 1.701166 l 3.474896,10.733956 H 20.227588 L 17.171156,11.269931 Z\"\n     fill=\"#f59122\"\n     id=\"path305\"\n     style=\"stroke-width:0.112854\" />\n  <path\n     d=\"m 23.756994,11.269931 h 3.383937 l 3.456727,10.733956 H 26.94084 Z\"\n     fill=\"#f59122\"\n     id=\"path307\"\n     style=\"stroke-width:0.112854\" />\n  <path\n     d=\"m 23.756994,11.269931 h 3.311145 l -3.165563,10.733956 h -3.674988 z\"\n     fill=\"#f59121\"\n     id=\"path309\"\n     style=\"stroke-width:0.112854\" />\n  <path\n     d=\"m 17.171156,11.269931 h 3.238353 l -3.111054,10.733956 h -3.656818 z\"\n     fill=\"#f59121\"\n     id=\"path311\"\n     style=\"stroke-width:0.112854\" />\n</svg>\n",
+      "headers" : {
+        "Content-Type" : "image/svg+xml"
+      }
+    },
+    "uuid" : "408155b0-7f79-4751-9854-6fd5f82f452e",
+    "persistent" : true,
+    "priority" : 5
+  }, {
+    "id" : "0d797c8b-0f54-4832-b9b7-3622761e906d",
+    "name" : "Login handler",
+    "request" : {
+      "urlPath" : "/login",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 302,
+      "body" : "",
+      "headers" : {
+        "Location" : "{{formData request.body 'form' urlDecode=true}}{{#assign 'code'}}{{#base64 padding=false}}c={{form.clientId}}&s={{base64 form.email padding=false}}{{#contains form.scopes.0 'email'}}&e={{form.email}}{{/contains}}{{#if form.nonce}}&n={{form.nonce}}{{/if}}{{#if form.given_name}}&g={{form.given_name}}{{/if}}{{#if form.family_name}}&f={{form.family_name}}{{/if}}{{/base64}}{{/assign}}{{form.redirectUri}}?code={{urlEncode code}}&state={{form.state}}"
+      },
+      "transformers" : [ "response-template" ]
+    },
+    "uuid" : "0d797c8b-0f54-4832-b9b7-3622761e906d",
+    "persistent" : true,
+    "priority" : 5
+  }, {
+    "id" : "bc571e51-e324-4e51-bb6b-1fbd74df1b65",
+    "name" : "Token",
+    "request" : {
+      "urlPath" : "/token",
+      "method" : "POST",
+      "bodyPatterns" : [ {
+        "contains" : "code="
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "bodyFileName": "token-response.json",
+      "headers" : {
+        "Content-Type" : "application/json"
+      },
+      "transformers" : [ "response-template" ]
+    },
+    "uuid" : "bc571e51-e324-4e51-bb6b-1fbd74df1b65",
+    "persistent" : true,
+    "priority" : 5
+  }, {
+    "id" : "a45e2815-9ec8-41d2-b7f9-b351ef36cde3",
+    "name" : "User info",
+    "request" : {
+      "urlPath" : "/v1/userinfo",
+      "method" : "GET",
+      "headers" : {
+        "Authorization" : {
+          "contains" : "Bearer "
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "bodyFileName": "user-info-response.json",
+      "headers" : {
+        "Content-Type" : "application/json"
+      },
+      "transformers" : [ "response-template" ]
+    },
+    "uuid" : "a45e2815-9ec8-41d2-b7f9-b351ef36cde3",
+    "persistent" : true,
+    "priority" : 5
+  }, {
+    "id" : "95900ca1-6688-4eab-b8c4-a5fc8107c420",
+    "name" : "Favicon",
+    "request" : {
+      "url" : "/favicon.png",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "base64Body" : "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AcYDC8A5hvTSwAABI1JREFUWMO11m2IXWcRB/Df85x7Ny9tYivpq4La2hahiiCazaZ2FzVCP4hKo+AnrYKuolXSJGgqGhFBTGIhKqkWaj6kon4oCopCU7MbmjfBiFaJlZAWShJDEqK2WXf33nvGD+du9mRzk91tsn+43HPPzDPzn5lnZm4yT2w5MAQJi7rfIrRS1t7QPzJfc5WBK2HbgSF9ixeZ+N/4Crwd78I9uLF2/jyO4TAO55ROoFy3anZClyXw/b1D0mTSWRJvkmIt1uJeXHeZc4EJHMVvJLuydGQ2Ij0JbN0/KLEkeBDr8A4U88zuMfw48URwbv3A6OwEHjv0Pu12h5RWJPF1fAbX94i0hWbtfLv7vjlDt4VfYZMyHdUI6/tHexPYPLLGskWTItJtxGPdlNejnsRf8DucwXewrCv7PX6BNXg/bplBZC+GIxwpimxd/54Lgjz1sKxvkrCc2IyPzXB+BA/jQxHxTezuRj2F49iZUvo0PoynMF6T34+tKbm9LMuLmGX43r4hY5PNFDyET9aIdfBrfLzU+Ekpn0rp8o3zyKqRieBQRBrGJpyriR/AxiQt2la18jSBnMKSvtY78WVVf0/V+ml8Qfhbzu3YOLDHbNgwMCpHvJo6foBv4JVauT8V4gMhbH2uIpG3HRiSUmric3hLzdYhfBUnGql9yeW5Eh65b5RCO0lP4MluMPA6fFYnTd0dOSJExN3dFE3hv/hu4lgZyVcG9s3Z+QUSA6NCTOCHeL4mGpTj3XJMlwCDeGNN6Vll2h2RbFw9Mm/n00g6jfGj+OWMLDyQ26UtB4dkZe7DfTUyk3hajvPrr8o56wdGFO3FVK17tibq7zSK1yvJcrkCd9WEp/DHq/J8KV7CP2u/35zETUnIWI7basIXSafnsKfmiCTkVyq7F3Cj7oRtFMl44jncgBwcaDE2i/vzGFVNwkI1qHoitymWlq2ybV/iZtVsGVdddI1HD/edw89V/Z9xbOxMntjywYkrEXhZNS2nEJdTXHf/iKVfWgkH8W+Uqil6BlKxfc29+ANu6p7ZiYc6Dz9zTQrQGF6p3WkpiuYODNcyOIg/5R5nrlXxL6SmKJrXubjNJ1SbUn4tRueN5Ba8rfbmpHBO0FhQx8P9VQ7CyhkZ+LuUTi14BgpBshyfML3kOthNTHYeP7hwBPLnVypKhI+o/qRM4YVg91TbLAiBxvB7KLNOtgqPYmlXVOJnN//j1hfLJRMLQyANr9JOzZRSuRo/wt018X5i5+l7/sWdJyuy18zz8Hs107gyyhtEuRZfwx01jRP4dop8vMwlXzx1lQQ236H58hvE4vEiOvl6Jm8vIw+oJuQgFte0T2NTLuKZKCl3TO+6XgRW46fF9jVXGkhZ8kJ59tXfauUNqmV2F27tYfMENpF3lZ2IzuMHLxL2IvDW7mc27MdfuxE3e8g72IdvFY1yT9mJaO+4dMsvxCCaVG3HXcRTkpOdsazz5KGeyg3VZjqr2gExRycN1WabVG21spvq5/FssLfsax1PImL7n2c19BI++hqyMaa6XGvQifCflNIZtMpunecSzf8BAfiTd64y2vUAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTYtMDctMjRUMTI6NDc6MDArMDE6MDBVUQnnAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE2LTA3LTI0VDEyOjQ3OjAwKzAxOjAwJAyxWwAAAABJRU5ErkJggg==",
+      "headers" : {
+        "Content-Type" : "image/png"
+      }
+    },
+    "uuid" : "95900ca1-6688-4eab-b8c4-a5fc8107c420",
+    "persistent" : true,
+    "priority" : 5
+  }, {
+    "id" : "e5c94f05-740e-46fc-857a-3e79698fdaf3",
+    "name" : "JWKS",
+    "request" : {
+      "url" : "/oauth2/v3/certs",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{{{jwks}}}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      },
+      "transformers" : [ "response-template" ]
+    },
+    "uuid" : "e5c94f05-740e-46fc-857a-3e79698fdaf3",
+    "persistent" : true,
+    "priority" : 5
+  }, {
+    "id" : "f4f9dfc6-de38-4101-91be-64c3d06219ac",
+    "name" : "Landing page",
+    "request" : {
+      "url" : "/",
+      "method" : "GET",
+      "pathParameters" : { },
+      "formParameters" : { }
+    },
+    "response" : {
+      "status" : 200,
+      "bodyFileName": "index.html",
+      "headers" : { },
+      "transformers" : [ "response-template" ]
+    },
+    "uuid" : "f4f9dfc6-de38-4101-91be-64c3d06219ac",
+    "persistent" : true,
+    "priority" : 5
+  } ]
+}

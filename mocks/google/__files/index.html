@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{#if (eq request.requestLine.host 'oauth.mocklab.io')}}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-78148205-7"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-78148205-7');
+      </script>
+    {{/if}}
+  
+    <link href="https://fonts.googleapis.com/css?family=Cairo:300" rel="stylesheet"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.svg">
+
+    <title>Google Sign-In Mock</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+    body {
+      margin: 0;
+      padding: 0;
+      color: #2f363e;
+      font-family: DMSans,sans-serif;
+      font-size: 18px;
+      line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 2em 0 0.5em;
+    line-height: 1.2;
+    font-family: DMSans,sans-serif;
+    font-weight: bold;
+}
+
+p {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+a {
+    color: #0a49df;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav ul li, nav ol li {
+    margin-bottom: 0;
+}
+
+#content {
+    margin: 0 auto;
+}
+
+.header-nav {
+    padding: 0 1rem;
+    height: 48px;
+    border-bottom: solid 1px #d7e4ff;
+}
+
+.sticky {
+    clear: both;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0em;
+    z-index: 1000;
+}
+
+.header-nav__container {
+    max-width: 1280px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-nav__logo {
+    float: left;
+    margin-right: 1.69492%;
+    height: auto;
+}
+
+.header-nav__item {
+    font-size: 1em;
+    font-weight: bold;
+    margin-right: 1.69492%;
+}
+
+.header-nav__item--last {
+    flex-grow: 100;
+    text-align: right;
+}
+
+.header-nav__logo img {
+    width: 124px;
+    vertical-align: middle;
+}
+
+.header-nav__cta {
+    color: #fff;
+    background: #2d69f6;
+    outline: 0;
+    font-family: DMSans, sans-serif !important;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 7px 15px;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 600;
+    border: none;
+}
+
+.header-nav__cta a {
+    color: white;
+    font-weight: bold;
+}
+
+#main {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+    margin-top: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    animation: intro 0.3s both;
+    animation-delay: 0.35s;
+    min-height: 1024px;
+    display: flex;
+}
+
+
+.login-start-button {
+    border: 3px solid #c1c1c1;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: inline;
+    width: 30em;
+    vertical-align: center;
+}
+
+.login-start-button img {
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: text-top;
+}
+
+.logout-button {
+    background-color: transparent;
+    font-family: Cairo,sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    color: #40904D;
+    border: none;
+    cursor: pointer;
+}
+
+.demo-box {
+    border: 1px solid #c1c1c1;
+    border-radius: 6px;
+    margin-top: 1em;
+    margin-right: 3em;
+    padding: 1em;
+}
+
+.subtitle {
+    color: #c1c1c1;
+    margin-top: -1em;
+}
+
+#callout {
+    max-width: 250px;
+    border: 1px #c1c1c1 solid;
+    padding: 15px;
+    border-radius: 6px;
+    margin-left: 3em;
+    margin-top: 10em;
+}
+
+#callout h2 {
+    margin-top: 0em;
+}
+
+@media only screen and (max-width: 1000px) {
+  #main {
+    flex-direction: column;
+  }
+
+  #callout {
+    margin-right: 3em;
+    margin-bottom: 3em;
+  }
+}
+  </style>
+</head>
+
+<body>
+    <nav class="header-nav sticky">
+        <ul class="header-nav__container">
+          
+            <li class="header-nav__logo">
+                <a href="/">
+                    <img src="https://app.wiremock.cloud/images/wiremock_cloud_logo.svg" title="WireMock Cloud">
+                </a>
+            </li>
+            
+            <li class="header-nav__item header-nav__item--last">&nbsp;</li>
+
+            <li class="header-nav__cta">
+                <a href="https://wiremock.io?utm_source=auth-mocks&utm_campaign=google" title="Sign up" target="_blank">Sign up to WireMock Cloud</a>
+            </li>
+        </ul>
+
+    </nav>
+  
+  <div id="main">
+    <div id="content">
+      <h1 style="margin-top:0em;">Google Sign-In Mock</h1>
+      <p class="subtitle">Powered by <a href="https://wiremock.io?utm_source=auth-mocks&utm_campaign=google" target="_new">WireMock</a></p>
+      
+      <p>
+        This is a mock of Google's OAuth2 / OpenID Connect compatible sign-in, for integration and performance testing.
+      </p>
+      
+      <h2>Configuration</h2>
+      <p>
+          You can integrate your app's OIDC client with this mock using the following details:
+      </p>
+      
+      <p>
+        Authorization URI: <code>{{request.requestLine.baseUrl}}/o/oauth2/v2/auth</code><br/>
+        Token URI: <code>{{request.requestLine.baseUrl}}/token</code><br/>
+        User info URI: <code>{{request.requestLine.baseUrl}}/v1/userinfo</code><br/>
+        JWKS URI: <code>{{request.requestLine.baseUrl}}/oauth2/v3/certs</code><br/>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

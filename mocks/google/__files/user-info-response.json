@@ -1,0 +1,12 @@
+{{#trim}}
+{{#assign 'accessToken'}}{{{regexExtract request.headers.Authorization.0 '[^\s]*$'}}}{{/assign}}
+{{regexExtract (base64 accessToken decode=true padding=false) '(.+?)\.\.(.+?)$' 'parts'}}
+{{formData (base64 parts.1 decode=true padding=false) 'form'}}
+{
+    "sub": "{{form.s}}",
+    "email": "{{base64 form.s decode=true padding=false}}"{{#if form.g}},
+    "given_name": "{{form.g}}",
+    "family_name": "{{form.f}}"
+    {{/if}}
+}
+{{/trim}}

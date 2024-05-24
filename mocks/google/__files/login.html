@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      body {
+        font-family: sans-serif;   
+      }
+      
+      #login-box {
+        max-width: 400px;
+        margin-left:auto;
+        margin-right: auto;
+        margin-top: 100px;
+        border: 1px solid rgb(229 231 235);
+        border-radius: 8px;
+        background: white;
+        padding: 15px;
+        box-shadow: 0 4px 8px rgba(0,0,0,.08);
+      }
+      
+      input[type="submit"] {
+        background: #2d69f6;
+        color: white;
+        border-radius: 8px;
+        border: none;
+        font-size: 18px;
+        padding: 0.5em 1em;
+      }
+      
+      .title {
+        text-align: center;
+      }
+      
+      label {
+        display: block;
+        margin-bottom: 6px;
+      }
+      
+      .text-input {
+        height: 1.5rem;
+        width: 90%;
+        border: 1px solid #cacaca;
+        border-radius: 4px;
+        font-weight: 400;
+        font-size: .9rem;
+        padding: 7px 15px;
+        line-height: 22px;
+        text-align: left;
+        background: 0 0;
+      }
+      
+      .help-text {
+          max-width: 400px;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+          color: darkgray;
+          line-height: 1.5em;
+          font-weight: lighter;
+          font-size: 18px;
+          padding: 15px;
+      }
+
+    </style>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.svg">
+    <title>Mock Google Sign-In - Powered by WireMock</title>
+  </head>
+<body>
+  <div id="login-box">
+    <div id="logos" style="text-align: center;margin-top:15px;margin-bottom:15px">
+      <img src="/images/google-logo.svg" alt="Google Sign-In" style="height:25px"/>
+      <span style="font-weight: bold;font-size:24px;padding:0 15px 0 15px;vertical-align: super;">+</span>
+      <a href="https://www.wiremock.io?utm_source=auth-mocks" target="_new">
+        <img src="/images/wiremock-logo-wide.svg" alt="WireMock" style="height:25px"/>
+      </a>
+    </div>
+    <p class="title">Mock Google Sign-In - Powered by <a href="https://www.wiremock.io?utm_source=auth-mocks" target="_new">WireMock</a></p>
+    <br />
+    {{#eq request.query.error.0 'invalidUser'}}
+    <p style="color: red">Error: not a recognised user</p>
+    {{/eq}}
+    <form method="POST" action="/login">
+      <input type="hidden" name="state" value="{{request.query.state}}"/>
+      <input type="hidden" name="redirectUri" value="{{request.query.redirect_uri}}"/>
+      <input type="hidden" name="clientId" value="{{request.query.client_id}}"/>
+      <input type="hidden" name="nonce" value="{{request.query.nonce}}"/>
+      <input type="hidden" name="scopes" value="{{request.query.scope}}"/>
+      
+      <label for="email">Email:</label>
+      <input class="text-input" type="email" id="email" name="email" placeholder="yours@example.com"/><br /><br />
+
+      {{#contains request.query.scope.0 'profile'}}
+      <label for="given_name">Given name:</label>
+      <input class="text-input" type="text" id="given_name" name="given_name" placeholder="Dean"/><br /><br />
+
+      <label for="family_name">Family name:</label>
+      <input class="text-input" type="text" id="family_name" name="family_name" placeholder="Dorsey"/><br /><br />
+      {{/contains}}
+      
+      <!-- Hidden but still present for UI automation -->
+      <input class="text-input" type="password" id="password" name="password" style="display:none"/>
+      
+      <br /><br />
+      <input id="login-submit" type="submit" value="Login" />
+    </form>
+  </div>
+  
+  <div class="help-text">
+    Enter any email address and password.<br /> It doesn't matter if they don't exist.
+  </div>
+</body>
+</html>
